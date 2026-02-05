@@ -136,8 +136,29 @@ export const templateSurveyQuestions = [
         text: "Comment poursuivez-vous votre déplacement ?",
         type: 'singleChoice',
         options: [
-            { id: 1, text: "À pied", next: "Q8" }
+            { id: 1, text: "À pied", next: "Q8" },
+            { id: 2, text: "En bus : ligne (numéro à renseigner)", next: "Q7_bus" },
+            { id: 3, text: "En tram : ligne (numéro à renseigner)", next: "Q7_tram" },
+            { id: 4, text: "En vélos personnels", next: "Q8" },
+            { id: 5, text: "Avec un autre engin de déplacements personnels (giroue, trotinette etc.)", next: "Q8" },
+            { id: 6, text: "En voiture (covoiturage)", next: "Q8" }
         ]
+    },
+
+    {
+        id: "Q7_bus",
+        text: "Quel numéro de ligne de bus ?",
+        type: 'freeText',
+        freeTextPlaceholder: "Numéro de ligne",
+        next: "Q8"
+    },
+
+    {
+        id: "Q7_tram",
+        text: "Quel numéro de ligne de tram ?",
+        type: 'freeText',
+        freeTextPlaceholder: "Numéro de ligne",
+        next: "Q8"
     },
 
     // Q8 - If parking was closed, what alternatives (open question)
