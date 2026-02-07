@@ -9,6 +9,7 @@ export const templateSurveyQuestions = [
         id: "POSTE",
         text: "Poste d'enquête :",
         type: 'freeText',
+        image: '/plan.png',
         freeTextPlaceholder: "Indiquez votre poste",
         next: "Q1"
     },
